@@ -1,0 +1,71 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background: #011627;
+}
+
+.App {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: auto;
+  text-align: center;
+}
+
+.App h2 {
+  margin-top: 2rem;
+}
+
+.container {
+  display: flex;
+}
+
+.outputContainer {
+  display: flex;
+  flex-wrap: wrap;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60vw;
+}
+
+.output {
+  position: relative;
+  padding-top: 100%;
+}
+
+.output > * {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+.output iframe,
+.output .sp-stack {
+  height: 100%;
+}
+
+.output:nth-child(3n + 3) {
+  margin-right: 0;
+}
